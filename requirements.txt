@@ -1,0 +1,11 @@
+# Desktop automation
+pywinauto>=0.6.8
+
+# Web automation
+playwright
+
+# API testing
+requests
+
+# Testing
+pytest>=7.4.0
