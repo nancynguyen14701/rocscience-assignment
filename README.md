@@ -87,9 +87,9 @@ Uses **Playwright** with Page Object Model to test login flows on
 ### API Automation
 
 ```bash
-pytest api/ -v
+pytest task2b_api/ -v
 # or
-python api/test_invalid_login.py
+python task2b_api/test_invalid_login.py
 ```
 
 Tests login via HTTP POST using `requests`:
