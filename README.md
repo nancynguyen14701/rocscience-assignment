@@ -5,7 +5,6 @@ Automated tests covering desktop, web, and API testing.
 ## Project Structure
 
 ```
-.
 ├── task1_desktop/
 │   ├── output                 # Contains Notepad created files
 │   ├── config.py              # Test configuration constants
