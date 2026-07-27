@@ -47,8 +47,8 @@ Automated tests covering desktop, web, and API testing.
 # Create and activate Python virtual environment
 cd rocscience-assignment
 python -m venv .venv
-source .venv/bin/activate  # macOS/Linux
-.venv\Scripts\activate   # Windows
+source .venv/bin/activate    # macOS/Linux
+.venv\Scripts\activate.bat   # Windows CMD
 
 # Install dependencies
 pip install -r requirements.txt
