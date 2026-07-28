@@ -7,6 +7,7 @@ Automated tests covering desktop, web, and API testing.
 ```
 .
 ├── task1_desktop/
+│   ├── output                 # Contains Notepad created files
 │   ├── config.py              # Test configuration constants
 │   ├── pages/
 │   │   └── notepad_page.py    # Page Object for Notepad (pywinauto)
@@ -37,7 +38,6 @@ Automated tests covering desktop, web, and API testing.
 ## Prerequisites
 
 - **Python 3.9+**
-- **Google Chrome** (for Playwright web tests)
 - **Windows 11** (for desktop Notepad automation)
 - Screen must not be locked during desktop tests
 
@@ -49,6 +49,7 @@ cd rocscience-assignment
 python -m venv .venv
 source .venv/bin/activate    # macOS/Linux
 .venv\Scripts\activate.bat   # Windows CMD
+.venv\Scripts\Activate.ps1   # Windows Powershell
 
 # Install dependencies
 pip install -r requirements.txt
@@ -62,15 +63,11 @@ playwright install
 ### Desktop Automation (Notepad)
 
 ```bash
-# Run all desktop tests
 pytest task1_desktop/ -v
-
-# Run specific test
-pytest task1_desktop/tests/test_notepad.py -v
 ```
 
 Uses **pywinauto** with UI Automation backend to control Notepad by element
-properties (control type, automation ID) — no coordinates, no hard sleeps.
+properties (control type, automation ID) — no coordinates.
 
 ### Web Automation (Login Tests)
 
@@ -93,8 +90,7 @@ python task2b_api/test_invalid_login.py
 ```
 
 Tests login via HTTP POST using `requests`:
-- Invalid credentials (expects rejection)
-- Valid credentials (expects redirect)
+- Invalid credentials (expects rejection 400 Bad request)
 
 ## Design Decisions
 
