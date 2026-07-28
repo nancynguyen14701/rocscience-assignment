@@ -8,16 +8,18 @@ Automated tests covering desktop, web, and API testing.
 ├── task1_desktop/
 │   ├── output                 # Contains Notepad created files
 │   ├── config.py              # Test configuration constants
+│   ├── conftest.py            # Test fixtures
 │   ├── pages/
 │   │   └── notepad_page.py    # Page Object for Notepad (pywinauto)
 │   ├── tests/
-│   │   ├── conftest.py        # Test fixtures
+│   │   
 │   │   └── test_notepad.py    # Desktop automation tests
 │   └── utils/
 │       ├── file_helper.py     # File operations
 │       └── waits.py           # Window/file polling helpers
 │
 ├── task2_web/
+│   ├── config.py              # Test configuration constants
 │   ├── conftest.py            # Browser fixtures (Playwright)
 │   ├── pages/
 │   │   ├── base_page.py       # Base Page Object
