@@ -22,6 +22,18 @@ class NotepadPage:
         self.editor = self.window.child_window(control_type="Document")
         self.editor.wait("ready", timeout=10)
 
+    def click_edit_button(self):
+        edit_btn = self.window.child_window(
+            title="Edit",
+            auto_id="Edit",
+            control_type="MenuItem"
+            )
+
+        edit_btn.click_input()
+
+        print("============ Control Identifiers ==============")
+        self.window.print_control_identifiers(filename = r"output/control_identifiers.txt")
+
     def write(self, text):
         self.editor.iface_value.SetValue(text)
 

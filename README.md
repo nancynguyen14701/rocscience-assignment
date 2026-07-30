@@ -65,14 +65,15 @@ playwright install
 ### Desktop Automation (Notepad)
 
 ```bash
-pytest task1_desktop/ -v
+cd task1_desktop/
+pytest -v
 ```
 
 Use the following code to print all control identifiers with the UIA Inspector:
 
 ```python
 print("============ Control Identifiers ==============")
-self.window.print_control_identifiers()
+self.window.print_control_identifiers(filename = r"output/control_identifiers.txt")
 ```
 
 Uses **pywinauto** with UI Automation backend to control Notepad by element
@@ -81,7 +82,8 @@ properties (control type, automation ID) — no coordinates.
 ### Web Automation (Login Tests)
 
 ```bash
-pytest task2_web/ -v
+cd task2_web/
+pytest -v
 ```
 Use Playwright Codegen to inspect browser elements and generate locators
 ```bash

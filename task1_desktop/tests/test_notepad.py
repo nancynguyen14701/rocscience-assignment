@@ -9,8 +9,6 @@ from utils.file_helper import (
     file_exists,
     read_file,
 )
-
-
 def test_notepad_workflow(notepad):
     """
     Scenario:
@@ -43,4 +41,7 @@ def test_notepad_workflow(notepad):
     
     # Verify content matches expected text
     assert read_file(FILE_PATH) == EXPECTED_TEXT
+
+def test_edit_button(notepad):
+    notepad.click_edit_button()
 
