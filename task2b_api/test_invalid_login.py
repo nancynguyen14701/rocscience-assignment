@@ -1,6 +1,3 @@
-import json
-import sys
-
 import requests
 
 BASE_URL = "https://auth.rocscience.com"

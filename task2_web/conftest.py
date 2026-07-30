@@ -15,5 +15,4 @@ def page(browser: Browser):
     context = browser.new_context()
     page = context.new_page()
     yield page
-    page.close()
     context.close()
