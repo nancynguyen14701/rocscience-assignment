@@ -1,10 +1,10 @@
 from pages.base_page import BasePage
-from config import URL
+from config import URLS
 
 class HomePage(BasePage):
 
     def open(self) -> "HomePage":
-        self.page.goto(URL, wait_until="domcontentloaded")
+        self.page.goto(self.base_url, wait_until="domcontentloaded")
         self.page.wait_for_selector("#portal-icon-container")
         self.dismiss_cookie_banner()
         return self

@@ -1,8 +1,12 @@
+import pytest
+
 from pages.home_page import HomePage
 from pages.login_page import LoginPage
 
 
 class TestRocPortalLogin:
+
+    @pytest.mark.ab1
     def test_login_page_elements(self, page):
         # Arrange
         home = HomePage(page).open()
